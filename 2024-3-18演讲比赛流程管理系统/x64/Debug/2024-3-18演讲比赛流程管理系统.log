@@ -1,0 +1,23 @@
+﻿  speechManager.cpp
+E:\STUDY\C++\C++Study\C++Code\2024-3-18演讲比赛流程管理系统\speechManager.cpp(248,31): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+E:\Study_app\Visual-Studio\IDE\VC\Tools\MSVC\14.35.32215\include\numeric(34,26): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+E:\Study_app\Visual-Studio\IDE\VC\Tools\MSVC\14.35.32215\include\numeric(41): message : 查看对正在编译的函数 模板 实例化“_Ty std::accumulate<_InIt,_Ty,std::plus<void>>(const _InIt,const _InIt,_Ty,_Fn)”的引用
+          with
+          [
+              _Ty=float,
+              _InIt=std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>,
+              _Fn=std::plus<void>
+          ]
+E:\STUDY\C++\C++Study\C++Code\2024-3-18演讲比赛流程管理系统\speechManager.cpp(149,50): message : 查看对正在编译的函数 模板 实例化“_Ty std::accumulate<std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>,float>(const _InIt,const _InIt,_Ty)”的引用
+          with
+          [
+              _Ty=float,
+              _InIt=std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>
+          ]
+  演讲比赛流程管理系统.cpp
+  正在生成代码...
+  2024-3-18演讲比赛流程管理系统.vcxproj -> E:\STUDY\C++\C++Study\C++Code\2024-3-18演讲比赛流程管理系统\x64\Debug\2024-3-18演讲比赛流程管理系统.exe
