@@ -1,5 +1,8 @@
 #pragma once
 #include"Identity.h"
+#include<fstream>
+#include"globalFile.h"
+
 
 //教师类
 class Teacher :public Identity {

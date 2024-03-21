@@ -7,5 +7,5 @@ public:
 	virtual void openMenu() = 0;
 
 	string m_Name;//用户名
-	int m_Pwd;//密码
+	string m_Pwd;//密码
 };

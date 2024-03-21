@@ -1,5 +1,7 @@
 #pragma once
 #include"Identity.h"
+#include<fstream>
+#include"globalFile.h"
 
 class Manager :public Identity {
 public:

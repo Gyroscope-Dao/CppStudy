@@ -7,6 +7,50 @@ using namespace std;
 #include"teacher.h"
 #include"manager.h"
 
+//管理员菜单
+void managerMenu(Identity*& manager) {
+	while (true)
+	{
+		manager->openMenu();
+
+		Manager* man = (Manager*)manager;//将父类指针强转为子类指针，方可调用子类里其他接口
+		int select = 0;
+		cin >> select;
+		switch (select)
+		{
+		case 1://添加账号
+			man->addPerson();
+			break;
+		case 2://查看账号
+			man->showPerson();
+			break;
+		case 3://查看机房
+			man->showComputer();
+			break;
+		case 4://清空预约
+			man->cleanFile();
+			break;
+		case 0:
+		{
+			delete manager;//销毁堆区对象
+			cout << "注销成功！" << endl;
+			system("pause");
+			system("cls");
+			return;
+			break;
+		}
+
+		default:
+		{
+			cout << "输入有误！" << endl;
+			system("pause");
+			system("cls");
+			break;
+		}
+		}
+	}
+}
+
 //登录
 void Login(string fileName, int type) {
 	Identity* person = NULL;//父类对象， 用于指向子类对象
@@ -81,7 +125,7 @@ void Login(string fileName, int type) {
 				system("cls");
 				person = new Manager(name, pwd);
 				//进入管理员身份菜单
-
+				managerMenu(person);
 				return;
 			}
 
@@ -127,7 +171,6 @@ int main() {
 		case 0://退出
 			cout << "欢迎下次使用！" << endl;
 			system("pause");
-			return 0;
 			break;
 		default:
 			cout << "输入有误，请重新选择！" << endl;
