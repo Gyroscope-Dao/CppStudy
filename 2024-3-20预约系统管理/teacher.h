@@ -17,5 +17,5 @@ public:
 
 	void validOrder();//审核预约
 
-	int m_EmpId();//教师编号
+	int m_EmpId;//教师编号
 };
