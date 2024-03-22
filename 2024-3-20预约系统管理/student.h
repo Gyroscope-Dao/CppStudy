@@ -2,6 +2,9 @@
 #include"Identity.h"
 #include<fstream>
 #include"globalFile.h"
+#include<vector>
+#include "computerRoom.h"
+#include"orderFile.h"
 
 
 //学生类
@@ -22,4 +25,6 @@ public:
 	void cancelOrder();//取消预约
 
 	int m_Id;//学号
+
+	vector<ComputerRoom>vCom;
 };

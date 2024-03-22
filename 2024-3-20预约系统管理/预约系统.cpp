@@ -50,6 +50,48 @@ void managerMenu(Identity*& manager) {
 		}
 	}
 }
+//学生菜单
+void studentMenu(Identity*& student) {
+	while (true)
+	{
+		student->openMenu();
+
+		Student* stu = (Student*)student;
+		int select = 0;
+		cin >> select;
+		switch (select)
+		{
+		case 1://申请预约
+			stu->applyOrder();
+			break;
+		case 2://查看自身预约
+			stu->showMyOrder();
+			break;
+		case 3://查看所有预约
+			stu->showAllOrder();
+			break;
+		case 4://取消预约
+			stu->cancelOrder();
+			break;
+		case 0://注销（退出）
+		{
+			delete student;
+			cout << "注销成功！" << endl;
+			system("pause");
+			system("cls");
+			return;
+			break;
+		}
+		default:
+		{
+			cout << "输入有误！" << endl;
+			system("pause");
+			system("cls");
+			break;
+		}
+		}
+	}
+}
 
 //登录
 void Login(string fileName, int type) {
@@ -90,7 +132,7 @@ void Login(string fileName, int type) {
 				system("cls");
 				person = new Student(id, name, pwd);
 				//进入学生身份菜单
-
+				studentMenu(person);
 				return;
 			}
 
@@ -171,6 +213,7 @@ int main() {
 		case 0://退出
 			cout << "欢迎下次使用！" << endl;
 			system("pause");
+			//system("cls");
 			break;
 		default:
 			cout << "输入有误，请重新选择！" << endl;

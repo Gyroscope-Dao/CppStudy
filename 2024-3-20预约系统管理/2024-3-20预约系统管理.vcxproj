@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="manager.cpp" />
+    <ClCompile Include="orderFile.cpp" />
     <ClCompile Include="student.cpp" />
     <ClCompile Include="teacher.cpp" />
     <ClCompile Include="预约系统.cpp" />
@@ -137,6 +138,7 @@
     <ClInclude Include="globalFile.h" />
     <ClInclude Include="Identity.h" />
     <ClInclude Include="manager.h" />
+    <ClInclude Include="orderFile.h" />
     <ClInclude Include="student.h" />
     <ClInclude Include="teacher.h" />
   </ItemGroup>
