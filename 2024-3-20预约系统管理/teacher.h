@@ -2,7 +2,8 @@
 #include"Identity.h"
 #include<fstream>
 #include"globalFile.h"
-
+#include"orderFile.h"
+#include<vector>
 
 //教师类
 class Teacher :public Identity {

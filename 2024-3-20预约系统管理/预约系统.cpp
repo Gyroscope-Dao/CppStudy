@@ -92,6 +92,41 @@ void studentMenu(Identity*& student) {
 		}
 	}
 }
+//教师菜单
+void teacherMenu(Identity*& teacher) {
+	while (true)
+	{
+		teacher->openMenu();
+		Teacher* tea = (Teacher*)teacher;
+		int select = 0;
+		cin >> select;
+		switch (select)
+		{
+		case 1://查看所有预约
+			tea->showAllOrder();
+			break;
+		case 2://审核预约
+			tea->validOrder();
+			break;
+		case 0:
+		{
+			delete teacher;
+			cout << "注销成功！" << endl;
+			system("pause");
+			system("cls");
+			return;
+			break;
+		}
+		default:
+		{
+			cout << "输入有误！" << endl;
+			system("pause");
+			system("cls");
+			break;
+		}
+		}
+	}
+}
 
 //登录
 void Login(string fileName, int type) {
@@ -150,7 +185,7 @@ void Login(string fileName, int type) {
 				system("cls");
 				person = new Teacher(id, name, pwd);
 				//进入教师身份菜单
-
+				teacherMenu(person);
 				return;
 			}
 
